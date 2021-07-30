@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "money-falling-from-sky_gettyimages-934096022.jpeg",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "money-falling-from-sky_gettyimages-934096022@2x.jpeg",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "money-falling-from-sky_gettyimages-934096022@3x.jpeg",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
