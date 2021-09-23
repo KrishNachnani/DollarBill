@@ -1,21 +1,19 @@
 //
-//  ViewController.swift
-//  AnimalFriends
+//  Take Photo.swift
+//  DollarBill
 //
-//  Created by Krish Nachnani on 7/27/21.
+//  Created by Krish Nachnani on 9/8/21.
 //
 import UIKit
 import Alamofire
 import SwiftyJSON
 import AVFoundation
 
-class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var topLabel: UILabel!
     @IBOutlet weak var imageMain: UIImageView!
     @IBOutlet weak var answerLabel: UILabel!
-    @IBOutlet weak var buttonMain: UIButton!
-    @IBOutlet weak var buttonSecond: UIButton!
     
     let dollarnames = ["1dollarback":"the back of a one dollar bill.", "1dollarfront":"the front of a one dollar bill.", "5dollarsback":"the back of a five dollar bill.", "5dollarsfront":"the front of a five dollar bill.", "10dollarsback":"the back of a ten dollar bill.", "10dollarsfront":"the front of a ten dollar bill.", "20dollarsback":"the back of a twenty dollar bill.", "20dollarsfront":"the front of a twenty dollar bill.", "50dollarsback":"the back of a fifty dollar bill.", "50dollarsfront":"the front of a fifty dollar bill."]
     override func viewDidLoad() {
@@ -23,29 +21,18 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         // Do any additional setup after loading the view.
         //buttonMain.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
         //buttonMain.backgroundColor = UIColor.blue
-        buttonMain.layer.cornerRadius = 25.0
-        buttonMain.tintColor = UIColor.white
-        buttonSecond.layer.cornerRadius = 25.0
-        buttonSecond.tintColor = UIColor.white
-    }
-
-
-    @IBAction func buttonPressed(_ sender: Any) {
-        print("Button pressed")
-        let vc = UIImagePickerController()
-        //vc.sourceType = .camera
-        vc.sourceType = .photoLibrary
-        vc.allowsEditing = true
-        vc.delegate = self
-        present(vc, animated: true)
-        answerLabel.text = "Getting Image..."
-        buttonMain.isHidden = true
-        buttonSecond.isHidden = true
     }
     
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        print("About to take picture")
+        takePhoto()
+    }
+
     
-    @IBAction func secondPressed(_ sender: Any) {
+    
+    func takePhoto() {
         print("Button pressed")
         let vc = UIImagePickerController()
         vc.sourceType = .camera
@@ -54,8 +41,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         vc.delegate = self
         present(vc, animated: true)
         answerLabel.text = "Getting Image..."
-        buttonMain.isHidden = true
-        buttonSecond.isHidden = true
+        
     }
     
     
@@ -115,8 +101,6 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
               
 
                }
-            self.buttonMain.isHidden = false
-            self.buttonSecond.isHidden = false
             
         }
         
