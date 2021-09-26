@@ -92,7 +92,7 @@ class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePicker
                    let myJson = JSON(responseJsonStr)
                    let predictedValue = myJson["predicted_label"].string
                    print("Saw predicted value \(String(describing: predictedValue))")
-                let predictionMessage = "This is a " + dollarnames[predictedValue!]!
+                let predictionMessage = "This is " + dollarnames[predictedValue!]!
                    self.answerLabel.text=predictionMessage
                 self.say(string: predictionMessage)
 
