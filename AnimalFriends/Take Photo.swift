@@ -15,6 +15,7 @@ class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePicker
     @IBOutlet weak var imageMain: UIImageView!
     @IBOutlet weak var answerLabel: UILabel!
     
+    var showCamera = true
     let dollarnames = ["1dollarback":"the back of a one dollar bill.", "1dollarfront":"the front of a one dollar bill.", "5dollarsback":"the back of a five dollar bill.", "5dollarsfront":"the front of a five dollar bill.", "10dollarsback":"the back of a ten dollar bill.", "10dollarsfront":"the front of a ten dollar bill.", "20dollarsback":"the back of a twenty dollar bill.", "20dollarsfront":"the front of a twenty dollar bill.", "50dollarsback":"the back of a fifty dollar bill.", "50dollarsfront":"the front of a fifty dollar bill."]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,14 +27,18 @@ class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePicker
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        print("About to take picture")
-        takePhoto()
+        if showCamera{
+            print("About to take picture")
+            takePhoto()
+        }
+        
     }
 
     
     
     func takePhoto() {
         print("Button pressed")
+        showCamera = false
         let vc = UIImagePickerController()
         vc.sourceType = .camera
         //vc.sourceType = .photoLibrary
@@ -81,7 +86,7 @@ class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePicker
         let imageB64 = Data(image).base64EncodedData()
         //let uploadURL = "https://3h6ys7t373.execute-api.us-east-1.amazonaws.com/Predict/03378121-5f5b-4e24-8b5b-7a029003f2a4"
         //let uploadURL = "https://svexr6i4fi.execute-api.us-east-1.amazonaws.com/Predict/93396303-c75a-49d0-9736-c540ca073768"
-        let uploadURL = "https://askai.aiclub.world/b692c6a7-ffff-4266-9360-8abd8e2fe0ac"
+        let uploadURL = "https://askai.aiclub.world/08f9ac85-ffc6-4dae-b533-5fb5089b5598"
         
         AF.upload(imageB64, to: uploadURL).responseJSON { [self] response in
             
@@ -95,6 +100,7 @@ class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePicker
                 let predictionMessage = "This is " + dollarnames[predictedValue!]!
                    self.answerLabel.text=predictionMessage
                 self.say(string: predictionMessage)
+                self.showCamera = true
 
                case .failure(let error):
                    print("\n\n Request failed with error: \(error)")
