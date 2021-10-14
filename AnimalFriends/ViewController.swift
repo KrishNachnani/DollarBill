@@ -31,7 +31,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         CentralImage.isHidden = true
         Button1.backgroundColor = UIColor.blue
         Button2.backgroundColor = UIColor.green
-        //Button2.isHidden = true
+        Button2.isHidden = true
+        Button1.isHidden = true
         
         
     }

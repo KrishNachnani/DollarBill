@@ -19,7 +19,7 @@ class PhotoLibraryViewController: UIViewController, UINavigationControllerDelega
     
     @IBOutlet weak var AnswerLabel: UILabel!
     
-    let dollarnames = ["1dollarback":"the back of a one dollar bill.", "1dollarfront":"the front of a one dollar bill.", "5dollarsback":"the back of a five dollar bill.", "5dollarsfront":"the front of a five dollar bill.", "10dollarsback":"the back of a ten dollar bill.", "10dollarsfront":"the front of a ten dollar bill.", "20dollarsback":"the back of a twenty dollar bill.", "20dollarsfront":"the front of a twenty dollar bill.", "50dollarsback":"the back of a fifty dollar bill.", "50dollarsfront":"the front of a fifty dollar bill."]
+    let dollarnames = ["1back":"the back of a one dollar bill.", "1front":"the front of a one dollar bill.", "5back":"the back of a five dollar bill.", "5front":"the front of a five dollar bill.", "10back":"the back of a ten dollar bill.", "10front":"the front of a ten dollar bill.", "20back":"the back of a twenty dollar bill.", "20front":"the front of a twenty dollar bill.", "50back":"the back of a fifty dollar bill.", "50front":"the front of a fifty dollar bill.", "100front": "the front of a hundred dollar bill.", "100back": "the back of a hundred dollar bill."]
 
     override func viewDidLoad() {
         super.viewDidLoad()

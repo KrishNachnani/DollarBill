@@ -85,6 +85,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BVg-ib-m4g">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <color key="backgroundColor" systemColor="systemGray2Color"/>
+                            </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="NoB-30-XVr">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <subviews>
@@ -108,10 +112,14 @@
                         <viewLayoutGuide key="safeArea" id="O50-za-cJd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="BVg-ib-m4g" secondAttribute="trailing" id="5Rf-UZ-VGl"/>
                             <constraint firstItem="O50-za-cJd" firstAttribute="trailing" secondItem="NoB-30-XVr" secondAttribute="trailing" id="Dtj-y8-xoT"/>
                             <constraint firstItem="O50-za-cJd" firstAttribute="bottom" secondItem="NoB-30-XVr" secondAttribute="bottom" id="Gch-Gb-Mzv"/>
+                            <constraint firstAttribute="bottom" secondItem="BVg-ib-m4g" secondAttribute="bottom" id="Peu-Et-hz2"/>
+                            <constraint firstItem="BVg-ib-m4g" firstAttribute="top" secondItem="kjM-fo-9OA" secondAttribute="top" id="YP0-fx-FOA"/>
                             <constraint firstItem="NoB-30-XVr" firstAttribute="top" secondItem="O50-za-cJd" secondAttribute="top" id="fms-Kn-EnF"/>
                             <constraint firstItem="NoB-30-XVr" firstAttribute="leading" secondItem="O50-za-cJd" secondAttribute="leading" id="o9C-FL-k33"/>
+                            <constraint firstItem="BVg-ib-m4g" firstAttribute="leading" secondItem="kjM-fo-9OA" secondAttribute="leading" id="tIG-pw-csZ"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Image Upload" image="filemenu.and.cursorarrow" catalog="system" id="VqX-hK-Hko"/>
@@ -185,8 +193,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vex-65-hxx"/>
                         <segue destination="uGt-lU-PSr" kind="relationship" relationship="viewControllers" id="14H-Qc-5lI"/>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="vex-65-hxx"/>
                         <segue destination="cd9-As-f7F" kind="relationship" relationship="viewControllers" id="P5v-fu-Whp"/>
                     </connections>
                 </tabBarController>
@@ -205,6 +213,9 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray2Color">
+            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

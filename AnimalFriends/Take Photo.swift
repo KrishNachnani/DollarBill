@@ -29,6 +29,7 @@ class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePicker
         super.viewDidAppear(animated)
         if showCamera{
             print("About to take picture")
+            Take_Photo.say(string: "Take Picture")
             takePhoto()
         }
         
@@ -72,7 +73,7 @@ class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePicker
         
     }
     
-    func say(string: String) {
+    static func say(string: String) {
         let utterance = AVSpeechUtterance(string: string)
         utterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         utterance.rate = 0.5
@@ -99,7 +100,7 @@ class Take_Photo: UIViewController,UINavigationControllerDelegate, UIImagePicker
                    print("Saw predicted value \(String(describing: predictedValue))")
                 let predictionMessage = "This is " + dollarnames[predictedValue!]!
                    self.answerLabel.text=predictionMessage
-                self.say(string: predictionMessage)
+                Take_Photo.say(string: predictionMessage)
                 self.showCamera = true
 
                case .failure(let error):
