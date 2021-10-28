@@ -36,7 +36,8 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         Button1.isHidden = true
         
         //Added for Accessibility
-        topLabel.adjustsFontForContentSizeCategory = true
+        //topLabel.isAccessibilityElement = true
+        //topLabel.adjustsFontForContentSizeCategory = true
     
         
         
