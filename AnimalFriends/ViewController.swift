@@ -28,11 +28,14 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         // Do any additional setup after loading the view.
         //buttonMain.backgroundColor = UIColor.init(red: 48/255, green: 173/255, blue: 99/255, alpha: 1)
         //buttonMain.backgroundColor = UIColor.blue
+    
         CentralImage.isHidden = true
         Button1.backgroundColor = UIColor.blue
         Button2.backgroundColor = UIColor.green
         Button2.isHidden = true
         Button1.isHidden = true
+        
+        //Added for Accessibility
         topLabel.adjustsFontForContentSizeCategory = true
     
         
