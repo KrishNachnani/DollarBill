@@ -33,10 +33,11 @@ class ViewController: UIViewController,UINavigationControllerDelegate, UIImagePi
         Button2.backgroundColor = UIColor.green
         Button2.isHidden = true
         Button1.isHidden = true
+        topLabel.adjustsFontForContentSizeCategory = true
+    
         
         
     }
-
 
     
     
