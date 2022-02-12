@@ -57,7 +57,7 @@
         <!--Image Upload-->
         <scene sceneID="yqQ-4W-pnm">
             <objects>
-                <viewController id="cd9-As-f7F" customClass="PhotoLibraryViewController" customModule="DollarBill" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="cd9-As-f7F" customClass="PL2ViewController" customModule="DollarBill" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kjM-fo-9OA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
