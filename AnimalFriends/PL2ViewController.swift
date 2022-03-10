@@ -11,7 +11,7 @@ class PL2ViewController: UIViewController, UINavigationControllerDelegate, UIIma
   @IBOutlet weak var TopLabel: UILabel!
   @IBOutlet weak var ImageView: UIImageView!
   @IBOutlet weak var AnswerLabel: UILabel!
-  let dollarnames = ["1back":"the back of a one dollar bill.", "1front":"the front of a one dollar bill.", "5back":"the back of a five dollar bill.", "5front":"the front of a five dollar bill.", "10back":"the back of a ten dollar bill.", "10front":"the front of a ten dollar bill.", "20back":"the back of a twenty dollar bill.", "20front":"the front of a twenty dollar bill.", "50back":"the back of a fifty dollar bill.", "50front":"the front of a fifty dollar bill.", "100front": "the front of a hundred dollar bill.", "100back": "the back of a hundred dollar bill."]
+  let dollarnames = ["1back":"the back of a one dollar bill.", "1front":"the front of a one dollar bill.", "5back":"the back of a five dollar bill.", "5front":"the front of a five dollar bill.", "10back":"the back of a ten dollar bill.", "10front":"the front of a ten dollar bill.", "20back":"the back of a twenty dollar bill.", "20front":"the front of a twenty dollar bill.", "50back":"the back of a fifty dollar bill.", "50front":"the front of a fifty dollar bill.",#imageLiteral(resourceName: "rotatedexample.jpg") "100front": "the front of a hundred dollar bill.", "100back": "the back of a hundred dollar bill."]
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view.
@@ -100,7 +100,3 @@ class PL2ViewController: UIViewController, UINavigationControllerDelegate, UIIma
     }
   }
 }
-4:13
-The only changes are in functions processFile() and processApi2(). Essentially we were calling using image parameter, but we needed to provide imageB64.
-4:13
-Please let me know if there are any questions.
